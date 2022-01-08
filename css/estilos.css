@@ -1,0 +1,334 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "Roboto";
+}
+
+.boton
+{
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.boton.boton-rojo
+{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 5px 0px 5px 0px;
+}
+
+.boton.boton-negro
+{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 15px 0px 15px 0px;
+    box-shadow: 0px 10px 10px 0px black;
+    cursor: pointer;
+}
+
+.seccion
+{
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+.row
+{
+    display: flex;/*Se le dijo al row que todo sera flexible yse comportara como fila*/
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.columna/*se le dijo a la columna que va a tener espacios entre los elementos*/
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.columna-33/*Se le dio un tamaño a cada columna*/
+{
+    width:33.33%;
+}
+
+.columna-25
+{
+    width: 25%;
+}
+
+.cuadrado-perfecto
+{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.cuadrado-perfecto img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+footer.seccion
+{
+    background-color: black;
+    color: white;
+    padding-bottom: 0px;
+}
+
+a
+{
+    display: inline-block;
+    text-decoration: none;
+}
+
+header
+{
+    padding: 15px 0px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    z-index: 1;
+    background-color: white;
+}
+/*debo ver con divs como capas que envuelven otras capas primero la primera capa es para que contega todo la segunda es apra darle un tamaño y si tien elemento podemos usarla como flex y luego diseño cada una*/
+.container
+{
+    width: 1140px;
+    margin: 0px auto;/*para que se centre*/
+    padding:0px 15px;
+    position: relative;
+}
+
+.container-fluid
+{
+    width: 100%;
+    padding:0px 15px;
+    position: relative;
+}
+
+.columna-50
+{
+    width: 40%;
+}
+
+.empujar-50
+{
+    margin-left:60%;
+}
+
+header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo
+{
+    width: 100px;
+}
+
+header .container nav a
+{
+    text-decoration:none;
+    color: red;
+    margin: 0px 15px;
+}
+
+#Inicio
+{
+    position: relative;/*este si ocupa espacio por mas que lo corramos lo que esta abajo no sube porque hace como si este si estuviese*/
+}
+
+#Inicio img
+{   
+    width: 100%;
+    display: block;
+}
+
+#Inicio .bloque-inicio
+{
+    position: absolute;/*el absolute no ocupa espacio por eso l oque esta debajo de lo que es absolute se posiciona arriab del otro elemento*/
+    top:40%;
+    left:50%;
+    width: 400px;
+    text-align: center;
+    margin-left:-200px;
+}
+
+#Inicio .bloque-inicio h1
+{
+    color: white;
+    font-size:35px;
+}
+
+#Inicio .bloque-inicio p
+{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#Nosotros
+{
+    background-image: url("../imagenes/latas.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+#Servicios .container .row .columna .bloque-servicio
+{
+    border: 1px solid grey;
+}
+
+#Servicios .container .row .columna .bloque-servicio .bloque-img-servicio img
+{
+    width: 100%;
+}
+
+#Servicios .container .row .columna .bloque-servicio .bloque-img-servicio, .cuadrado-perfecto
+{
+    padding-bottom: 56.25%;
+}
+
+#Servicios .container .row .columna .bloque-servicio .bloque-contenido-servicio
+{
+    padding: 15px;
+    text-align: center;
+}
+
+#Galeria h4
+{
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    position: absolute;
+    top:40%;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+}
+
+#Galeria img
+{
+    filter: grayscale(1);
+    transition: all 300ms linear;
+}
+
+#Galeria .cuadrado-perfecto:hover img
+{
+    filter:grayscale(0);
+}
+
+#Contacto
+{
+    position: relative;
+}
+
+#Contacto iframe
+{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+}
+
+#Contacto form
+{
+    padding: 60px;
+    background-color: red;
+    border-radius: 20px 0px 20px 0px;
+}
+
+#Contacto form .form-block
+{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#Contacto form .form-block .form-control
+{
+    display: block;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid grey;
+    width: 100%;
+    padding: 10px;
+}
+
+#Contacto form .form-block textarea
+{   
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    font-size: 17px;
+    height: 100px;
+}
+
+#Contacto form .form-block .bloque-ultimo
+{
+    margin: 0px;
+}
+
+footer .barra-footer
+{
+    background-color: grey;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+ 
+footer ul
+{
+    padding-left:0px;
+    list-style: none;
+}
+
+footer ul li
+{
+    margin-bottom: 8px;
+}
+
+footer .logo-footer
+{
+    width: 100%;
+}
+
+footer p 
+{
+    margin-bottom: 27px;
+}
+
+footer a
+{
+    color: white;
+}
+
+footer .redes
+{
+    font-size: 30px;
+    display: flex;
+}
+
+footer .redes a 
+{
+    margin-right: 25px;
+}
